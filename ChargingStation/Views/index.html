@@ -2,16 +2,20 @@
 <head>
     <meta charset="utf-8">
     <title>ChargingStation</title>
+    <link rel="stylesheet" href="../../bower_components/leaflet-dist/leaflet.css" />
 </head>
 <body ng-controller="csCtrl">
 
-<ul>
-    <li ng-repeat="ls in chargerstations">
-        {{ls.csmd.id}}
-    </li>
-</ul>
+<leaflet markers="markers" center="center" width="480px" height="320px"></leaflet>
+<!--<ul>-->
+    <!--<li ng-repeat="ls in chargerstations">-->
+        <!--{{ls.csmd.id}}-->
+    <!--</li>-->
+<!--</ul>-->
+<script src="../../bower_components/leaflet-dist/leaflet.js"></script>
 <script src="../../bower_components/jquery/dist/jquery.js"></script>
 <script src="../../bower_components/angular/angular.js"></script>
+<script src="../../bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js"></script>
 <script src="../js/controllers.js"></script>
 </body>
 </html>
