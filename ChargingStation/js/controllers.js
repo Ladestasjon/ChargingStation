@@ -36,26 +36,24 @@ cs.controller('csCtrl', function ($scope, $http, $log) {
             }});
     };
 
-    $scope.$on('leafletDirectiveMap.viewreset', function(event){
-        var ladestasjoner = hentLadestasjoner();
+    var ladestasjoner = hentLadestasjoner();
 
-        ladestasjoner.success(function (data) {
-            $scope.chargerstations = data.chargerstations;
-            $.each($scope.chargerstations, function (i, station) {
-                var pos = station.csmd.Position;
-                pos = pos.replace(/"/g, "").replace(/'/g, "").replace(/\(|\)/g, "");
-                var latlng = pos.split(',');
-                markers.push({
-                    lat: parseFloat(latlng[0]),
-                    lng: parseFloat(latlng[1]),
-                    message: station.csmd.name,
-                    focus: true,
-                    draggable: false
-                });
+    ladestasjoner.success(function (data) {
+        $scope.chargerstations = data.chargerstations;
+        $.each($scope.chargerstations, function (i, station) {
+            var pos = station.csmd.Position;
+            pos = pos.replace(/"/g, "").replace(/'/g, "").replace(/\(|\)/g, "");
+            var latlng = pos.split(',');
+            markers.push({
+                lat: parseFloat(latlng[0]),
+                lng: parseFloat(latlng[1]),
+                message: station.csmd.name,
+                focus: true,
+                draggable: false
             });
         });
-
     });
+
 
 
 });
