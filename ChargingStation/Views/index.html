@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
-    <title>Charging Station</title>
+    <meta charset="utf-8">
+    <title>ChargingStation</title>
 </head>
-<body>
+<body ng-controller="csCtrl">
 
-<h1>HELLO</h1>
-
+<ul>
+    <li ng-repeat="phone in phones">
+        {{phone.name}}
+        <p>{{phone.snippet}}</p>
+    </li>
+</ul>
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+<script src="../../bower_components/angular/angular.js"></script>
+<script src="../js/controllers.js"></script>
 </body>
 </html>
