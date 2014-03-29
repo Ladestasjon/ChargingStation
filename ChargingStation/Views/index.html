@@ -6,9 +6,8 @@
 <body ng-controller="csCtrl">
 
 <ul>
-    <li ng-repeat="phone in phones">
-        {{phone.name}}
-        <p>{{phone.snippet}}</p>
+    <li ng-repeat="ls in chargerstations">
+        {{ls.csmd.id}}
     </li>
 </ul>
 <script src="../../bower_components/jquery/dist/jquery.js"></script>
