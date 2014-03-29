@@ -1,0 +1,20 @@
+{
+  "name": "ChargingStation",
+  "version": "1.3.3.7",
+  "authors": [
+    "vhsjon && andersem"
+  ],
+  "description": "A seriously wicked app that tosses the information you need right in your face without even asking",
+  "main": "index.html",
+  "keywords": [
+    "lol"
+  ],
+  "license": "CC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
